@@ -25,6 +25,16 @@ The specific questions to be addressed are:
 - What feature most strongly predict whether a wine is good or not?
 - What is the average pH value of wines rated as good?
 
+### Analysis plan
+
+To answer the predictive question, regression model will be applied to predict the wine quality. As shown in the flow chart below, firstly, exploratory data analysis will be performed to find out the existance of data imbalance, and the distributions of features. In the second step, we will compare multiple regression models. In terms of the data splitting, we will split 20% of data as our test data before fit the regression model. To optimize our model, hyperparameter optimization will be implemented. 
+
+
+
+ 
+
+
+![](img/flowchart.png)
 
 
 ### Data Description 
