@@ -21,7 +21,7 @@ Wine quality assessment basically consists of two parts: lab test and sensory te
 
 The specific questions to be addressed are:
 
-- **Given the Physicochemical lab test, how is the wine quality? (Main predictive question)**
+- **Given the Physicochemical lab test, how is the wine quality? (primary predictive question)**
 - What feature most strongly predict whether a wine is good or not?
 - What is the average pH value of wines rated as good?
 
