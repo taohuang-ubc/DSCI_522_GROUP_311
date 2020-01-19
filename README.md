@@ -17,6 +17,31 @@ Wine quality assessment basically consists of two parts: lab test and sensory te
 
 ## Proposal
 
+### Data Description 
+
+The dataset used in our milestone project is related to the Portuguese "Vinho Verde" wine. It was sourced from the UCI Machine Learning Repository and can be found [here]( http://archive.ics.uci.edu/ml/datasets/Wine+Quality). There There are in total 11 features from physicochemical lab tests, and one response from sensory test
+
+
+Input variables/features (based on physicochemical lab tests):
+
+- fixed acidity 
+- volatile acidity 
+- citric acid 
+- residual sugar 
+- chlorides 
+- free sulfur dioxide 
+- total sulfur dioxide 
+- density 
+- pH 
+- sulphates 
+- alcohol 
+
+Output variable/response: 
+
+- quality (score between 0 and 10) 
+
+
+
 
 ## Exploratory Data Analysis
 
