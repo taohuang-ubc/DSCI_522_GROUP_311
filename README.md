@@ -17,9 +17,19 @@ Wine quality assessment basically consists of two parts: lab test and sensory te
 
 ## Proposal
 
+### Research Question
+
+The specific questions to be addressed are:
+
+- Given the Physicochemical lab test, how is the wine quality?
+- What feature most strongly predict whether a wine is good or not?
+- What is the average pH value of wines rated as good?
+
+
+
 ### Data Description 
 
-The dataset used in our milestone project is related to the Portuguese "Vinho Verde" wine. It was sourced from the UCI Machine Learning Repository and can be found [here]( http://archive.ics.uci.edu/ml/datasets/Wine+Quality). There There are in total 11 features from physicochemical lab tests, and one response from sensory test
+The dataset used in our milestone project is related to the Portuguese "Vinho Verde" wine. It was sourced from the UCI Machine Learning Repository and can be found [here]( http://archive.ics.uci.edu/ml/datasets/Wine+Quality). There are 1599 observations in the dataset. The 11 features from physicochemical lab tests and one response from sensory test are listed as below: 
 
 **Input variables/features:**
 
