@@ -1,4 +1,4 @@
-# DSCI_522_GROUP_311
+# DSCI_522_GROUP_311 Milestone Wine Quality Prediction
 -------------
 **Author**: Hanying Zhang, Tao Huang, Xugang Zhong
 
