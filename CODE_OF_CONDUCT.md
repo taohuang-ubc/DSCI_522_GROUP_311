@@ -16,23 +16,23 @@ All participants in our events and communications are expected to show respect a
 
 # Unacceptable Behavior
 
-examples of unacceptable behaviour include, but are not limited to:
+Examples of unacceptable behaviour include, but are not limited to:
 - verbal/physical hostility towards others
 - harassment of any kind
 - exclusion of any kind
 - nonconsensual interactions
-- Hateful, or disrespectful speech
-- Sexist, Racist, or homophobic actions and language
-- Failure to communicate
-- Plagiarism
-- Missing Deadlines
+- hateful, or disrespectful speech
+- sexist, Racist, or homophobic actions and language
+- failure to communicate
+- plagiarism
+- missing deadlines
 - etc.
 
 Any form of inappropriate behavior should be reported as soon as possible, and will be dealt with accordingly.
 
 # Reporting of Unacceptable Behavior
 
-you can contact one of the contributors of this project where the issue will be forwarded to appropriate address:<br>
+You can contact one of the contributors of this project where the issue will be forwarded to appropriate address:<br>
 - [Xugang Zhong](https://github.com/chuusan/)
 - [Hanying Zhang](https://github.com/hanyingzhang)
 - [Tao Huang](https://github.com/taohuang-ubc)
