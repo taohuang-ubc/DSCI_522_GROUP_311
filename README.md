@@ -61,7 +61,7 @@ At the end of the project, a report including visualization, model-building proc
 ## Exploratory Data Analysis
 
 
-The detailed exploratory data analysis can be found [here](https://github.com/UBC-MDS/DSCI_522_GROUP_311/blob/6580b870cce823647df756aa431ecc9a185b786e/src/wine_quality_eda.ipynb)。
+The detailed exploratory data analysis can be found [here](https://github.com/UBC-MDS/DSCI_522_GROUP_311/blob/6580b870cce823647df756aa431ecc9a185b786e/src/wine_quality_eda.ipynb).
 
 ## Dependencies
 
