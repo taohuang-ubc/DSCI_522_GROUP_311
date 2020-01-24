@@ -75,7 +75,7 @@ training_data %>%
       facet_wrap(. ~ feature, scale = "free", ncol = 3) +
       geom_histogram(bins = 50)
 ```
-Figure 1. Distribution of training set predictors for the benign (B) and malignant (M) tumour cases.
+Figure 2. Distribution of all features in the training set.
 
 The histograms of all the features do not show any anomaly here.
 
@@ -90,7 +90,7 @@ ggplot(data = melted_corr, aes(x=Var1, y=Var2, fill=value)) +
         axis.title.x = element_blank(),
         axis.title.y = element_blank())
 ```
-Figure 3. Correlation heatmap between features
+Figure 3. Correlation heatmap between features.
 
 From the heatmap, I can see the following combinations of features are positive related:
     

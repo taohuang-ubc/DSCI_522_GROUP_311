@@ -43,15 +43,14 @@ poor ones(class 3,4).
 ### Distributions of all features
 
 ![](wine_quality_eda_files/figure-gfm/distributions%20of%20all%20features-1.png)<!-- -->
-Figure 1. Distribution of training set predictors for the benign (B) and
-malignant (M) tumour cases.
+Figure 2. Distribution of all features in the training set.
 
 The histograms of all the features do not show any anomaly here.
 
 ### Correlation between features
 
 ![](wine_quality_eda_files/figure-gfm/heatmap-1.png)<!-- --> Figure 3.
-Correlation heatmap between features
+Correlation heatmap between features.
 
 From the heatmap, I can see the following combinations of features are
 positive related:
