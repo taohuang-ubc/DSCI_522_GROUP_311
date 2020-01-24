@@ -1,8 +1,8 @@
 # author: Group 311 - Tao Huang, Xugang(Kirk) Zhong, Hanying Zhang
 # date: 2020-01-23
 
-'''This script performs data wrangling and paritionting on the data and 
-writes the train and test splits to local files.
+'''This script performs data wrangling and paritionting on the data to train and test splits. 
+The four splits will be: X_train, X_test, y_train and y_test. These splits will be written to local files.
 
 Usage: src/data_process.py --filepath=<filepath> --output_path=<output_path>
 
