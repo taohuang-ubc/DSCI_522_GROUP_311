@@ -16,7 +16,9 @@ chlorides, sulfur dioxide and alcohol etc. The last column for each row
 represents the quality score. A wine’s quality score is measured by
 sensors, which is score from 0 to 10, with 0 being the lowest and 10
 being the highest. We will build a model to discover the relationship
-between the physicochemical measurements and quality score.
+between the physicochemical measurements and quality score. There are
+1599 observations in the data set, and 11 features. There are 0
+observations with missing values in the data set.
 
 ## Partition the data set into training and test sets
 
@@ -31,7 +33,7 @@ observations for each class:
 Table 1. Counts of observation for each quality.
 
 ![](wine_quality_eda_files/figure-gfm/quality%20value%20distribution-1.png)<!-- -->
-Figure 1. Distribution of training set targets(y).
+<br>Figure 1. Distribution of training set targets(y).
 
 The quality classes of red wines are very **imbalanced**, this is
 definitely something we want to pay attention to. Most wines are among
