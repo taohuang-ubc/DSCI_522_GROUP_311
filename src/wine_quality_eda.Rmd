@@ -1,7 +1,7 @@
 ---
 title: "Exploratory data analysis of the Wine quality data set"
 output: github_document
-#bibliography: ../doc/wine_quality_refs.bib
+bibliography: ../doc/wine_quality_refs.bib
 ---
 
 ```{r setup, include=FALSE}
