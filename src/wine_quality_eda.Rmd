@@ -11,6 +11,7 @@ library(knitr)
 library(caret)
 library(janitor)
 library(reshape2)
+library(viridis)
 set.seed(2020)
 ```
 
@@ -84,9 +85,9 @@ The histograms of all the features do not show any anomaly here.
 corr <- cor(df)
 melted_corr <- melt(corr)
 # Heatmap
-ggplot(data = melted_corr, aes(x=Var1, y=Var2, fill=value)) + 
-  geom_tile() +
-  theme(axis.text = element_text(size = 12)， 
+
+ggplot(data = melted_corr, aes(x=Var1, y=Var2, fill=value)) + geom_tile() +
+theme(axis.text = element_text(size = 12),
         axis.title.x = element_blank(),
         axis.title.y = element_blank())
 ```
