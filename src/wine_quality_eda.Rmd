@@ -1,7 +1,7 @@
 ---
 title: "Exploratory data analysis of the Wine quality data set"
 output: github_document
-#bibliography: ../doc/wine_quality_refs.bib
+bibliography: ../doc/wine_quality_refs.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -100,3 +100,5 @@ From the heatmap, I can see the following combinations of features are positive 
 3. `total_sulfur_dioxide` and `free_sulfur_dioxide`
 
 For some chemical reasons, these three sets of features are highly correlated, and we definitely need to be aware of this when building our machine learning model.
+
+# References
