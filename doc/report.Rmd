@@ -83,7 +83,7 @@ knitr::include_graphics("../results/feature_weight_plot.png")
 knitr::include_graphics("../results/ranked_features.png")
 ```
 
-```{r prediction results, echo=FALSE, fig.cap="Figure 2. Prediction results", out.width = '90%'}
+```{r prediction results, echo=FALSE, fig.cap="Figure 3. Prediction results", out.width = '90%'}
 knitr::include_graphics("../results/prediction_result.png")
 ```
 
