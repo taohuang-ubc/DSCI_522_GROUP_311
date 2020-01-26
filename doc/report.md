@@ -3,6 +3,13 @@ The red wine quality prediction
 DSCI 522 Group 311: Tao Huang, Hanying Zhang, Kirk Zhong
 2020-01-24
 
+  - [Summary](#summary)
+  - [Analysis](#analysis)
+      - [R](#r)
+      - [Python](#python)
+  - [Results](#results)
+      - [References](#references)
+
 # Summary
 
 Using [UCI red wine quality
@@ -70,6 +77,44 @@ The following Python packages were used in this project:
 
 # Results
 
+From feature selection,
+
+<div class="figure">
+
+<img src="../results/feature_weight_plot.png" alt="Figure 1. Feature weight" width="90%" />
+
+<p class="caption">
+
+Figure 1. Feature weight
+
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="../results/ranked_features.png" alt="Figure 2. The relationship between MSE and number of featurs" width="100%" />
+
+<p class="caption">
+
+Figure 2. The relationship between MSE and number of featurs
+
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="../results/prediction_result.png" alt="Figure 2. Prediction results" width="90%" />
+
+<p class="caption">
+
+Figure 2. Prediction results
+
+</p>
+
+</div>
+
 ## References
 
 <div id="refs" class="references">
@@ -134,7 +179,7 @@ VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit
 Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben
 Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical
 Visualizations for Python.” *Journal of Open Source Software*, December.
-The Open Journal. <https://doi.org/10.21105/joss.01057>.
+<https://doi.org/10.21105/joss.01057>.
 
 </div>
 
@@ -142,8 +187,7 @@ The Open Journal. <https://doi.org/10.21105/joss.01057>.
 
 Walt, Stéfan van der, S Chris Colbert, and Gael Varoquaux. 2011. “The
 Numpy Array: A Structure for Efficient Numerical Computation.”
-*Computing in Science & Engineering* 13 (2). IEEE Computer Society:
-22–30.
+*Computing in Science & Engineering* 13 (2): 22–30.
 
 </div>
 

@@ -74,7 +74,18 @@ The following Python packages were used in this project:
 
 # Results
 
+From feature selection,
+```{r feature weight, echo=FALSE, fig.cap="Figure 1. Feature weight", out.width = '90%'}
+knitr::include_graphics("../results/feature_weight_plot.png")
+```
 
+```{r feature ranking, echo=FALSE, fig.cap="Figure 2. The relationship between MSE and number of featurs", out.width = '100%'}
+knitr::include_graphics("../results/ranked_features.png")
+```
+
+```{r prediction results, echo=FALSE, fig.cap="Figure 2. Prediction results", out.width = '90%'}
+knitr::include_graphics("../results/prediction_result.png")
+```
 
 
 ## References
