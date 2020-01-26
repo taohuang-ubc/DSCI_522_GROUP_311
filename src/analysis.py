@@ -80,6 +80,8 @@ def main(input, output):
     X_test_sel = X_test_scaled[:, rfe.support_]
     
     lr.fit(X_train_sel,y_train)
+    errors = fit_and_report(lr, X_train_sel, y_train, X_test_sel, y_test, mode='regression')
+    print(errors)
     
     relevant_features_bool=rfe.support_
     relevant_features_list = pd.DataFrame(list(X_train.iloc[:,relevant_features_bool].columns))
@@ -87,7 +89,7 @@ def main(input, output):
 
     relevant_features_list['weights'] = lr.coef_[0]
     relevant_features_list= relevant_features_list.rename(columns={0: "features"})
-    relevant_features_list
+    print(relevant_features_list)
     
     feature_weight_plot = alt.Chart(relevant_features_list).mark_bar().encode(
         x='features:N',

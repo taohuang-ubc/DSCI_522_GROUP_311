@@ -1,0 +1,80 @@
+---
+title: "The red wine quality prediction"
+author: "DSCI 522 Group 311: Tao Huang, Hanying Zhang, Kirk Zhong"
+date: "2020-01-24 "
+output:
+  github_document:
+    toc: true
+bibliography: ref.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(knitr)
+```
+
+# Summary
+
+Using [UCI red wine quality data](http://archive.ics.uci.edu/ml/datasets/Wine+Quality), based on a dataset of 1599 examples, we are trying to build a model that can predict the discrete wine garde by using the following red wine's physiochemical properties: 
+
+1 - fixed acidity
+2 - volatile acidity
+3 - citric acid
+4 - residual sugar
+5 - chlorides
+6 - free sulfur dioxide
+7 - total sulfur dioxide
+8 - density
+9 - pH
+10 - sulphates
+11 - alcohol
+
+We are trying to answer the following research question:
+
+1. Can we build a machine learning model that can predict the red wine quality based on its physiochemical properties
+2. What properties are the most important features that influence the quality of red wine
+
+Our machine learning model is able to predict the class of red wine with relatively low mean squared error of 0.38 and more importantly, we are able to discover the features that the really impact the quality of the red wine.
+
+# Analysis
+
+The Analysis portion of this project is done by Python. A standard scaler is used to scale all features into the same scale. To perform feature selection, we use scikit-learn's linear regression as an estimator and perform recursive feature selection. Reragding the number of features to select, we try the number from 1 to 11 (sum of features), we found after selecting six features, if we selected more, the model stop improving. Then we perform linear regression on the top six features by using scikit-learn's linear regression model.
+
+The following Python packages were used in this project:
+
+## R 
+
+- docopt [@docopt]
+
+- knitr [@knitr]
+
+- tidyverse [@tidyverse]
+
+- janitor[@janitor]
+
+- reshape2[@reshape2]
+
+- caret[@caret]
+
+## Python
+
+- docoptpython [@docoptpython]
+
+- request[@request]
+
+- pandas[@pandas]
+
+- numpy[@numpy]
+
+- altair[@altair]
+
+- scikit-learn[@sklearn]
+
+
+# Results
+
+
+
+
+## References
