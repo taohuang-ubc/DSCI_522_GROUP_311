@@ -1,40 +1,50 @@
 The red wine quality prediction
 ================
-DSCI 522 Group 311: Tao Huang, Hanying Zhang, Kirk Zhong
+DSCI 522 Group 311: Tao Huang, Hanying Zhang, Xugang Zhong
 2020-01-24
 
-  - [Summary](#summary)
-  - [Analysis](#analysis)
-      - [R](#r)
-      - [Python](#python)
-  - [Results](#results)
-      - [References](#references)
+## Summary
 
-# Summary
+To answer the question about predicting the red wine quality based on
+physiochemical properties, we propose a prediction model using linear
+regression algorithm. Based on the 1599 samples with 11 original
+physiochemical features, we deployed recursive feature elimination (RFE)
+to select features by recursively considering smaller and smaller sets
+of features. It turned out that 6 physiochemical properties is
+significant contributing to a better model performance. Building such
+model is valuable to support oenologist wine tasting evaluations and
+improve wine production.
 
-Using [UCI red wine quality
-data](http://archive.ics.uci.edu/ml/datasets/Wine+Quality), based on a
-dataset of 1599 examples, we are trying to build a model that can
-predict the discrete wine garde by using the following red wine’s
-physiochemical properties:
+## Introduction
 
-1 - fixed acidity 2 - volatile acidity 3 - citric acid 4 - residual
-sugar 5 - chlorides 6 - free sulfur dioxide 7 - total sulfur dioxide 8 -
-density 9 - pH 10 - sulphates 11 - alcohol
+According to [British Columbia Wine
+Institute](https://winebc.com/industry/media/quick-facts/), the BC wine
+industry contributes approximately $2.8 billion annually to British
+Columbia’s economy. To facilitate the development of BC wine industry,
+stakeholders are seeking a better way to improve the wine production and
+selling process with new techniques applied. Globally, wine
+certification and quality assessment are essential given this context.
 
-We are trying to answer the following research question:
+Wine quality assessment basically consists of two parts: the lab test
+and the sensory test. Physicochemical lab tests generally characterize
+wine based on features such as density, pH value, acidity, sugar, and
+alcohol, etc. While the sensory test is mainly relying on qualified
+experts. Due to the low interpretation of human sense, the relationship
+between sensory tests and the lab tests is somehow compared to a black
+box. The industry is curious about how ‘good’ the wine is, given the
+physicochemical lab test results. Therefore, a model integrating
+physiochemical lab tests and sensory tests is helpful in addressing the
+industry concern, supporting the wine evaluation and thus improving
+local wine production.
 
-1.  Can we build a machine learning model that can predict the red wine
-    quality based on its physiochemical properties
-2.  What properties are the most important features that influence the
-    quality of red wine
+## Methodology
 
-Our machine learning model is able to predict the class of red wine with
-relatively low mean squared error of 0.38 and more importantly, we are
-able to discover the features that the really impact the quality of the
-red wine.
-
-# Analysis
+The data used in this project is obtain from the [University of
+California Irvine Machine learning
+Repository](http://archive.ics.uci.edu/ml/datasets/Wine+Quality). It
+contains 1599 samples from red wine produced in Portugal. Each sample
+represents 11 physiochemical properties (features) from lab tests and
+also the sensory result (response) ranging from 0 to 10.
 
 The Analysis portion of this project is done by Python. A standard
 scaler is used to scale all features into the same scale. To perform
@@ -47,7 +57,7 @@ features by using scikit-learn’s linear regression model.
 
 The following Python packages were used in this project:
 
-## R
+### R
 
   - docopt (de Jonge 2018)
 
@@ -61,7 +71,7 @@ The following Python packages were used in this project:
 
   - caret(Kuhn 2020)
 
-## Python
+### Python
 
   - docoptpython (Keleshev 2014)
 
@@ -75,21 +85,11 @@ The following Python packages were used in this project:
 
   - scikit-learn(Buitinck et al. 2013)
 
-# Results
+## Results
 
-From feature selection,
-
-<div class="figure">
-
-<img src="../results/feature_weight_plot.png" alt="Figure 1. Feature weight" width="90%" />
-
-<p class="caption">
-
-Figure 1. Feature weight
-
-</p>
-
-</div>
+According to the optimization process, it turned out that 6 features are
+the best combination for our model based on the training and testing
+error.
 
 <div class="figure">
 
@@ -103,13 +103,32 @@ Figure 2. The relationship between MSE and number of featurs
 
 </div>
 
+The six physiochemical properties and their weights are reported as
+blow:
+
 <div class="figure">
 
-<img src="../results/prediction_result.png" alt="Figure 2. Prediction results" width="90%" />
+<img src="../results/feature_weight_plot.png" alt="Figure 1. Feature weight" width="90%" />
 
 <p class="caption">
 
-Figure 2. Prediction results
+Figure 1. Feature weight
+
+</p>
+
+</div>
+
+Based on the plot, we can see that: alchol is the most significant
+feature followed by volatile acidity and
+sulphates.
+
+<div class="figure">
+
+<img src="../results/prediction_result.png" alt="Figure 3. Prediction results" width="90%" />
+
+<p class="caption">
+
+Figure 3. Prediction results
 
 </p>
 
@@ -179,7 +198,7 @@ VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit
 Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben
 Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical
 Visualizations for Python.” *Journal of Open Source Software*, December.
-<https://doi.org/10.21105/joss.01057>.
+The Open Journal. <https://doi.org/10.21105/joss.01057>.
 
 </div>
 
@@ -187,7 +206,8 @@ Visualizations for Python.” *Journal of Open Source Software*, December.
 
 Walt, Stéfan van der, S Chris Colbert, and Gael Varoquaux. 2011. “The
 Numpy Array: A Structure for Efficient Numerical Computation.”
-*Computing in Science & Engineering* 13 (2): 22–30.
+*Computing in Science & Engineering* 13 (2). IEEE Computer Society:
+22–30.
 
 </div>
 
