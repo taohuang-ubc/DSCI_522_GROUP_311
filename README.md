@@ -15,7 +15,9 @@ Wine quality assessment basically consists of two parts: the lab test and the se
 ![](https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Wine_Cert_Programs_GettyImages_636693944_1920x1280.jpg)
 [Image courtesy of Getty](https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Wine_Cert_Programs_GettyImages_636693944_1920x1280.jpg)
 
-## Proposal
+## Report
+
+The final report can be accessed [here]().
 
 ### Research Question
 
@@ -53,15 +55,8 @@ To answer the predictive question, regression models will be applied to predict 
 
 ![](img/flowchart.png)
 
+## Usage
 
-### Research output
-
-At the end of the project, a report including visualization, model-building procedures is expected. Metrics such as the precision and accuracy will also be included in our final report.
-
-## Exploratory Data Analysis
-
-
-The detailed exploratory data analysis can be found [here](https://github.com/UBC-MDS/DSCI_522_GROUP_311/blob/6580b870cce823647df756aa431ecc9a185b786e/src/wine_quality_eda.ipynb).
 
 ## Dependencies
 
