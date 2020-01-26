@@ -19,18 +19,9 @@ Wine quality assessment basically consists of two parts: the lab test and the se
 
 The final report can be accessed [here]().
 
-### Research Question
-
-The specific questions to be addressed are:
-
-- **Given the Physicochemical lab test, how is the wine quality? (primary predictive question)**
-- What feature most strongly predicts whether a wine is good or not?
-- What is the average pH value of wines rated as good?
 
 
 ## Usage
-
-
 
 To replicate the analysis, clone this GitHub repository, install the [dependencies](#dependencies) listed below, and run the following commands at the command line/terminal from the root directory of this project:
 ```
