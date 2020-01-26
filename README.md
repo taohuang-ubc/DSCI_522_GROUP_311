@@ -15,9 +15,11 @@ Wine quality assessment basically consists of two parts: the lab test and the se
 [Image courtesy of Getty](https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Wine_Cert_Programs_GettyImages_636693944_1920x1280.jpg)
 
 
-## Exploratory Data Analysis
+## Report
 
-The detailed exploratory data analysis can be found [here](https://github.com/UBC-MDS/DSCI_522_GROUP_311/blob/6580b870cce823647df756aa431ecc9a185b786e/src/wine_quality_eda.md).
+The final report can be accessed [here]().
+
+
 
 ## Usage
 
@@ -38,6 +40,7 @@ Rscript src/plot_create.r --x_train=data/processed/X_train.csv --y_train=data/pr
 # analysis
 python src/analysis.py --input=data/processed --output=results
 ```
+
 
 ## Dependencies
 
