@@ -39,6 +39,9 @@ Rscript src/plot_create.r --x_train=data/processed/X_train.csv --y_train=data/pr
 
 # analysis
 python src/analysis.py --input=data/processed --output=results
+
+# report
+Rscript -e "rmarkdown::render('doc/avocado_predictors_report.Rmd', output_format = 'github_document')"
 ```
 
 
@@ -54,6 +57,7 @@ python src/analysis.py --input=data/processed --output=results
   - scikit-learn ==0.21
 
 - R version 3.6.1 and R packages:
+  - testthat==2.2.1
   - docopt==0.6.1
   - knitr==1.26
   - tidyverse==1.2.1
