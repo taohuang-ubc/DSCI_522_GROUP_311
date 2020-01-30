@@ -9,9 +9,9 @@ The URL used for this file should be ended with '.csv', here is an example:
 Usage: src/data_download.py --url=<url> --filepath=<filepath> --filename=<filename>
 
 Options:
---url=<url>              URL from where to download the data (a zip file with data zipped in standard csv format)
---filepath=<filepath>    Local file path to write the data file
---filename=<filename>    Local file name
+--url=<url>              URL from where to download the data. This link should be ended with '.csv', eg. "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
+--filepath=<filepath>    Local file path to write the data file. The path should not contain a "/" at the end, eg. "data/raw"
+--filename=<filename>    Local file name. This filename should not include any extension, here is an example: "red_wine"
 '''
 
 import pandas as pd
