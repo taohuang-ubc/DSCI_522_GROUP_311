@@ -5,9 +5,9 @@
 Usage: src/plot_create.r --x_train=<x_train> --y_train=<y_train> --output=<output>
   
 Options:
---x_train=<x_train>     Path (including filename) to the feature set of the training data
---y_train=<y_train>     Path (including filename) to the target set of the training data
---output=<output>   Output file path of the generated plots
+--x_train=<x_train>     Path (including filename) to the feature set of the training data (should include filename, eg. "data/processed/X_train.csv")
+--y_train=<y_train>     Path (including filename) to the target set of the training data (should include filename, eg. "data/processed/y_train.csv")
+--output=<output>   Output file path of the generated plots (should not include filename and "/" at the end, eg. "results")
 " -> doc
 
 library(tidyverse)
