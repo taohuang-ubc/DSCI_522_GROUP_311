@@ -10,7 +10,7 @@ Usage: src/data_download.py --url=<url> --filepath=<filepath> --filename=<filena
 
 Options:
 --url=<url>              URL from where to download the data. This link should be ended with '.csv', eg. "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
---filepath=<filepath>    Local file path to write the data file. The path should not contain a "/" at the end, eg. "data/raw"
+--filepath=<filepath>    Local file path to write the data file. The path should not contain any filename or a "/" at the end, eg. "data/raw"
 --filename=<filename>    Local file name. This filename should not include any extension, here is an example: "red_wine"
 '''
 
@@ -22,7 +22,15 @@ from docopt import docopt
 opt = docopt(__doc__)
 
 def main(url, filepath, filename):
+    try: 
+        request = requests.get(url, stream=True)
+        request.status_code == 200 # successful request
+    except Exception as ex:
+        print("URL does not exist.")
+        print(ex)
+
     filepath_long = filepath + "/" + filename + ".csv"
+    assert url[-4:] == '.csv', "The URL must point to a csv file!"
 
     # check file path
     if not os.path.exists(filepath):
@@ -36,19 +44,5 @@ def main(url, filepath, filename):
         print("Unable to download. Please check your URL again to see whether it is pointing to a downloadable file.")
         print(e)
 
-def test_url(url):
-    '''
-    This functions tests the existence of the input URL, and also checks if it is ended as '.csv'.
-    '''
-    try: 
-        request = requests.get(url, stream=True)
-        request.status_code == 200 # successful request
-    except Exception as ex:
-        print("URL does not exist.")
-        print(ex)
-
-    assert url[-4:] == '.csv', "The URL must point to a csv file!"
-
 if __name__ == "__main__":
-    test_url(opt["--url"])
     main(opt["--url"], opt["--filepath"], opt["--filename"])

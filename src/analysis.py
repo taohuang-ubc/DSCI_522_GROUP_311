@@ -6,8 +6,8 @@
 Usage: src/analysis.py --input=<input> --output=<output>
 
 Options:
---input=<input>  path of directory that contains the X_train, y_train, X_test, y_test. The path should not contain a "/" at the end. eg. "data/proceessed"
---output=<output>  output path to store the analysis plots. The path should not contain a "/" at the end. eg. "results"
+--input=<input>  path of directory that contains the X_train, y_train, X_test, y_test. The path should not contain any filename or a "/" at the end. eg. "data/proceessed"
+--output=<output>  output path to store the analysis plots. The path should not contain any filename or a "/" at the end. eg. "results"
 '''
 
 #import packages
