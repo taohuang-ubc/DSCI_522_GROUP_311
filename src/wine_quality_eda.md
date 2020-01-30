@@ -32,8 +32,17 @@ observations for each class:
 
 Table 1. Counts of observation for each quality.
 
-![](wine_quality_eda_files/figure-gfm/quality%20value%20distribution-1.png)<!-- -->
-<br>Figure 1. Distribution of training set targets(y).
+<div class="figure">
+
+<img src="../results/quality_value_distribution.png" alt="Figure 1. Distribution of training set targets(y)." width="100%" />
+
+<p class="caption">
+
+Figure 1. Distribution of training set targets(y).
+
+</p>
+
+</div>
 
 The quality classes of red wines are very **imbalanced**, this is
 definitely something we want to pay attention to. Most wines are among
@@ -44,15 +53,33 @@ poor ones(class 3,4).
 
 ### Distributions of all features
 
-![](wine_quality_eda_files/figure-gfm/distributions%20of%20all%20features-1.png)<!-- -->
+<div class="figure">
+
+<img src="../results/feature_distributions.png" alt="Figure 2. Distribution of all features in the training set." width="100%" />
+
+<p class="caption">
+
 Figure 2. Distribution of all features in the training set.
+
+</p>
+
+</div>
 
 The histograms of all the features do not show any anomaly here.
 
 ### Correlation between features
 
-![](wine_quality_eda_files/figure-gfm/heatmap-1.png)<!-- --> Figure 3.
-Correlation heatmap between features.
+<div class="figure">
+
+<img src="../results/feature_correlation_heatmap.png" alt="Figure 3. Correlation heatmap between features." width="100%" />
+
+<p class="caption">
+
+Figure 3. Correlation heatmap between features.
+
+</p>
+
+</div>
 
 From the heatmap, I can see the following combinations of features are
 positive related:
