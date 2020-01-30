@@ -8,7 +8,7 @@ Usage: src/data_process.py --filepath=<filepath> --output_path=<output_path>
 
 Options: 
 --filepath=<filepath>    Local file path to read the original data file (including filename) eg. "../documents/data/data_file.csv"
---output_path=<output_path>    Local file path to write the processed data file eg. "../documents/data"
+--output_path=<output_path>    Local file path to write the processed data file (should not include filename and "/" at the end) eg. "../documents/data"
 '''
 
 # import configparser
