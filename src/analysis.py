@@ -1,13 +1,13 @@
 # author: Group 311
 # date: 2020-01-23
 
-'''This script fits a linear regression model and outputs several images 
+'''This script fits a linear regression model and outputs several images.
 
 Usage: src/analysis.py --input=<input> --output=<output>
 
 Options:
---input=<input>  path of directory that contains the X_train, y_train, X_test, y_test.
---output=<output>  output path to store the analysis plots
+--input=<input>  path of directory that contains the X_train, y_train, X_test, y_test. The path should not contain a "/" at the end. eg. "data/proceessed"
+--output=<output>  output path to store the analysis plots. The path should not contain a "/" at the end. eg. "results"
 '''
 
 #import packages
