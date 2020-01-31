@@ -17,9 +17,7 @@ Wine quality assessment basically consists of two parts: the lab test and the se
 
 ## Report
 
-The final report can be accessed [here]().
-
-
+The final report can be accessed [here](doc/report.md).
 
 ## Usage
 
