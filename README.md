@@ -40,7 +40,7 @@ make clean
   - pandas==0.24.2
   - numpy==1.17.0
   - altair==4.0.0
-  - janitor==0.18.1
+  - pyjanitor==0.18.1
   - scikit-learn ==0.21
 
 - R version 3.6.1 and R packages:
