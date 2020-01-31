@@ -3,6 +3,14 @@ The red wine quality prediction
 DSCI 522 Group 311: Tao Huang, Hanying Zhang, Xugang Zhong
 2020-01-24
 
+  - [Summary](#summary)
+  - [Introduction](#introduction)
+  - [Methodology](#methodology)
+      - [R](#r)
+      - [Python](#python)
+  - [Results](#results)
+  - [References](#references)
+
 ## Summary
 
 To answer the question about predicting the red wine quality based on
@@ -119,8 +127,7 @@ Figure 1. Feature weight
 </div>
 
 Based on the plot, we can see that: alchol is the most significant
-feature followed by volatile acidity and
-sulphates.
+feature followed by volatile acidity and sulphates.
 
 <div class="figure">
 
@@ -198,7 +205,7 @@ VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit
 Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben
 Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical
 Visualizations for Python.” *Journal of Open Source Software*, December.
-The Open Journal. <https://doi.org/10.21105/joss.01057>.
+<https://doi.org/10.21105/joss.01057>.
 
 </div>
 
@@ -206,8 +213,7 @@ The Open Journal. <https://doi.org/10.21105/joss.01057>.
 
 Walt, Stéfan van der, S Chris Colbert, and Gael Varoquaux. 2011. “The
 Numpy Array: A Structure for Efficient Numerical Computation.”
-*Computing in Science & Engineering* 13 (2). IEEE Computer Society:
-22–30.
+*Computing in Science & Engineering* 13 (2): 22–30.
 
 </div>
 
