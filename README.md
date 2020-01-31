@@ -46,6 +46,7 @@ make clean
   - scikit-learn ==0.21
 
 - R version 3.6.1 and R packages:
+  - testthat==2.2.1
   - docopt==0.6.1
   - knitr==1.26
   - tidyverse==1.2.1
