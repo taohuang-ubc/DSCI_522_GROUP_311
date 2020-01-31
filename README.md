@@ -17,33 +17,20 @@ Wine quality assessment basically consists of two parts: the lab test and the se
 
 ## Report
 
-The final report can be accessed [here]().
-
-
+The final report can be accessed [here](doc/report.md).
 
 ## Usage
 
 To replicate the analysis, clone this GitHub repository, install the [dependencies](#dependencies) listed below, and run the following commands at the command line/terminal from the root directory of this project:
 ```
-# download data
-python src/data_download.py --url=https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv --filepath=data/raw --filename=red_wine
-
-# run eda report
-Rscript -e "rmarkdown::render('src/wine_quality_eda.Rmd')"
-
-# pre-process data 
-python src/data_process.py --filepath=data/raw/red_wine.csv --output_path=data/processed
-
-# create exploratory data analysis figure and write to file 
-Rscript src/plot_create.r --x_train=data/processed/X_train.csv --y_train=data/processed/y_train.csv --output=results
-
-# analysis
-python src/analysis.py --input=data/processed --output=results
-
-# report
-Rscript -e "rmarkdown::render('doc/avocado_predictors_report.Rmd', output_format = 'github_document')"
+make all
 ```
-
+To reset the repo to a clean state, with no intermediate or results
+files, run the following command at the command line/terminal from the
+root directory of this project: 
+```
+make clean
+```
 
 ## Dependencies
 
