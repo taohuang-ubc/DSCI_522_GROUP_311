@@ -30,56 +30,29 @@ observations for each class:
 | :------------- | -: | -: | -: | -: | -: | --: | --: | --: | -: | -: |
 | Training set   | 0 | 0 | 0 | 8 | 43 | 545 | 511 | 160 | 15 | 0 |
 
-Table 1. Counts of observation for each quality.
+Table 1. Counts of observation for each
+quality.
 
-<div class="figure">
-
-<img src="../results/quality_value_distribution.png" alt="Figure 1. Distribution of training set targets(y)." width="100%" />
-
-<p class="caption">
-
-Figure 1. Distribution of training set targets(y).
-
-</p>
-
-</div>
+<img src="../results/quality_value_distribution.png" title="Figure 1. Distribution of training set targets(y)." alt="Figure 1. Distribution of training set targets(y)." width="100%" />
 
 The quality classes of red wines are very **imbalanced**, this is
 definitely something we want to pay attention to. Most wines are among
 the middle classes(5 to 7), very few wines than excellent(class 8) or
-poor ones(class 3,4).
+poor ones(class
+3,4).
 
 ## Exploratory analysis on the training data set
 
 ### Distributions of all features
 
-<div class="figure">
+<img src="../results/feature_distributions.png" title="Figure 2. Distribution of all features in the training set." alt="Figure 2. Distribution of all features in the training set." width="100%" />
 
-<img src="../results/feature_distributions.png" alt="Figure 2. Distribution of all features in the training set." width="100%" />
-
-<p class="caption">
-
-Figure 2. Distribution of all features in the training set.
-
-</p>
-
-</div>
-
-The histograms of all the features do not show any anomaly here.
+The histograms of all the features do not show any anomaly
+here.
 
 ### Correlation between features
 
-<div class="figure">
-
-<img src="../results/feature_correlation_heatmap.png" alt="Figure 3. Correlation heatmap between features." width="100%" />
-
-<p class="caption">
-
-Figure 3. Correlation heatmap between features.
-
-</p>
-
-</div>
+<img src="../results/feature_correlation_heatmap.png" title="Figure 3. Correlation heatmap between features." alt="Figure 3. Correlation heatmap between features." width="100%" />
 
 From the heatmap, I can see the following combinations of features are
 positive related:
