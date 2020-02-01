@@ -57,13 +57,13 @@ def main(input, output):
     
 
     feature_plot = alt.Chart(df).mark_line().encode(
-        x='n_features_to_select',
-        y='value',
+        x='n_features_to_select:N',
+        y='value:Q',
         color = 'error_type'
-    )
+    ).configure_scale(round = True).configure_axisX(labelAngle=0)
+    
     
     feature_plot.configure(
-        numberFormat="0.4f"
     ).properties(
         title = "The relationship between MSE and number of features",
         width = 800,
@@ -89,19 +89,24 @@ def main(input, output):
 
     relevant_features_list['weights'] = lr.coef_[0]
     relevant_features_list= relevant_features_list.rename(columns={0: "features"})
+    
+    # test
+    assert len(relevant_features_list) == 6, 'The dimension of y_pred_df is wrong'
+
+    
     print(relevant_features_list)
     
     feature_weight_plot = alt.Chart(relevant_features_list).mark_bar().encode(
-        x='features:N',
-        y='weights'
-    )
+    alt.X('features:N', sort=alt.EncodingSortField(field="features", op="count", order='ascending')),
+    y='weights:Q'
+    ).configure_axisX(labelFontSize= 15,labelAngle= -45)
+    
     
     feature_weight_plot.configure(
-        numberFormat="0.4f"
     ).properties(
-        title = "The feature weights",
-        width = 800,
-        height = 400
+    title = "The feature weights",
+    width = 800,
+    height = 400
     ).save(output+"/feature_weight_plot.png")
     
 
@@ -111,10 +116,10 @@ def main(input, output):
 
     result_df = pd.concat([y_pred_df, y_true_df], axis=1)
 
-    plot_result = alt.Chart(result_df).mark_circle(size=10,opacity=0.6).encode(
-        x='actual:Q',
-        y='predicted:Q'
-    )
+    plot_result = alt.Chart(result_df).mark_boxplot().encode(
+        alt.X('actual:O',scale=alt.Scale(zero=False)),
+        alt.Y('predicted',scale=alt.Scale(zero=False))
+    ).configure_axisX(labelFontSize= 15,labelAngle= -45)
     
     plot_result.configure(
         numberFormat="0.4f"
@@ -125,8 +130,9 @@ def main(input, output):
     ).save(output+ "/prediction_result.png")
         
     print('This is the end of analysis, Hooray!!!')
-    
-    
+
+
+
 
 def fit_and_report(model, X, y, Xv, yv, mode = 'regression'):
     """
@@ -155,7 +161,11 @@ def fit_and_report(model, X, y, Xv, yv, mode = 'regression'):
     if mode.lower().startswith('regress'):
         errors = [mean_squared_error(y, model.predict(X)), mean_squared_error(yv, model.predict(Xv))]
     if mode.lower().startswith('classif'):
-        errors = [1 - model.score(X,y), 1 - model.score(Xv,yv)]        
+        errors = [1 - model.score(X,y), 1 - model.score(Xv,yv)]  
+    
+    # tests
+    assert len(errors) ==2, 'the len of errors is 2'
+    
     return errors
 
 
