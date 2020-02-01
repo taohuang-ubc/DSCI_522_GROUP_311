@@ -3,6 +3,14 @@ The red wine quality prediction
 DSCI 522 Group 311: Tao Huang, Hanying Zhang, Xugang Zhong
 2020-01-24
 
+  - [Summary](#summary)
+  - [Introduction](#introduction)
+      - [R](#r)
+      - [Python](#python)
+  - [Results](#results)
+  - [Discussion:](#discussion)
+  - [References](#references)
+
 ## Summary
 
 To answer the question about predicting the red wine quality based on
@@ -35,16 +43,16 @@ box. The industry is curious about how ‘good’ the wine is, given the
 physicochemical lab test results. Therefore, a model integrating
 physiochemical lab tests and sensory tests is helpful in addressing the
 industry concern, supporting the wine evaluation and thus improving
-local wine production.
-
-## Methodology
+local wine production.  
+\#\# Methodology
 
 The data used in this project is obtain from the [University of
 California Irvine Machine learning
-Repository](http://archive.ics.uci.edu/ml/datasets/Wine+Quality). It
-contains 1599 samples from red wine produced in Portugal. Each sample
-represents 11 physiochemical properties (features) from lab tests and
-also the sensory result (response) ranging from 0 to 10.
+Repository](http://archive.ics.uci.edu/ml/datasets/Wine+Quality)(Cortez
+et al. 2009)(Dua and Graff 2017). It contains 1599 samples from red wine
+produced in Portugal. Each sample represents 11 physiochemical
+properties (features) from lab tests and also the sensory result
+(response) ranging from 0 to 10.
 
 The Analysis portion of this project is done by Python. A standard
 scaler is used to scale all features into the same scale. To perform
@@ -59,21 +67,25 @@ The following Python packages were used in this project:
 
 ### R
 
-  - docopt (de Jonge 2018)
+  - testthat(Wickham 2019)
 
-  - knitr (Xie 2020)
+  - docopt(de Jonge 2018)
 
-  - tidyverse (Wickham 2017)
+  - knitr(Xie 2020)
+
+  - tidyverse(Wickham 2017)
 
   - janitor(Firke 2019)
 
   - reshape2(Wickham 2007)
 
+  - viridis(Garnier 2018)
+
   - caret(Kuhn 2020)
 
 ### Python
 
-  - docoptpython (Keleshev 2014)
+  - docoptpython(Keleshev 2014)
 
   - request(Reiz 2019)
 
@@ -82,6 +94,8 @@ The following Python packages were used in this project:
   - numpy(Walt, Colbert, and Varoquaux 2011)
 
   - altair(VanderPlas et al. 2018)
+
+  - pyjanitor(Ma 2019)
 
   - scikit-learn(Buitinck et al. 2013)
 
@@ -95,23 +109,51 @@ Eventually, we found after only 6 features are helping to decrease the
 errors, increasing the number of features selected beyond 6 will not
 help:
 
-<img src="../results/ranked_features.png" title="Figure 2. The relationship between MSE and number of featurs" alt="Figure 2. The relationship between MSE and number of featurs" width="100%" />
+<div class="figure">
+
+<img src="../results/ranked_features.png" alt="Figure 2. The relationship between MSE and number of featurs" width="100%" />
+
+<p class="caption">
+
+Figure 2. The relationship between MSE and number of featurs
+
+</p>
+
+</div>
 
 Now, we run `sklearn`’s `Recursive Feature Selection` again with the
 `n_features_to_select` explicitly set to 6, then the algorithm will fit
 linear regression models, remove one feature that has the smallest
 weight. `sklearn` recursively does this until the number of the features
 decrease to 6. The following are the 6 features remained eventually and
-their corresponding weights in ascending
-order:
+their corresponding weights in ascending order:
 
-<img src="../results/feature_weight_plot.png" title="Figure 1. Feature weight" alt="Figure 1. Feature weight" width="90%" />
+<div class="figure">
+
+<img src="../results/feature_weight_plot.png" alt="Figure 1. Feature weight" width="90%" />
+
+<p class="caption">
+
+Figure 1. Feature weight
+
+</p>
+
+</div>
 
 Finally, we plot the actual values on the x-axis and the predicted
-values on the
-y-axis:
+values on the y-axis:
 
-<img src="../results/prediction_result.png" title="Figure 3. Prediction results" alt="Figure 3. Prediction results" width="90%" />
+<div class="figure">
+
+<img src="../results/prediction_result.png" alt="Figure 3. Prediction results" width="90%" />
+
+<p class="caption">
+
+Figure 3. Prediction results
+
+</p>
+
+</div>
 
 Based on the plot, we can see that our model predicts well on the middle
 range (grades 5 to 7). However, for the low grade and high grade wines
@@ -149,6 +191,14 @@ Learning*, 108–22.
 
 </div>
 
+<div id="ref-cortez2009modeling">
+
+Cortez, Paulo, António Cerdeira, Fernando Almeida, Telmo Matos, and José
+Reis. 2009. “Modeling Wine Preferences by Data Mining from
+Physicochemical Properties.” *Decision Support Systems* 47 (4): 547–53.
+
+</div>
+
 <div id="ref-docopt">
 
 de Jonge, Edwin. 2018. *Docopt: Command-Line Interface Specification
@@ -156,10 +206,25 @@ Language*. <https://CRAN.R-project.org/package=docopt>.
 
 </div>
 
+<div id="ref-Dua2019">
+
+Dua, Dheeru, and Casey Graff. 2017. “UCI Machine Learning Repository.”
+University of California, Irvine, School of Information; Computer
+Sciences. <http://archive.ics.uci.edu/ml>.
+
+</div>
+
 <div id="ref-janitor">
 
 Firke, Sam. 2019. *Janitor: Simple Tools for Examining and Cleaning
 Dirty Data*. <https://CRAN.R-project.org/package=janitor>.
+
+</div>
+
+<div id="ref-viridis">
+
+Garnier, Simon. 2018. *Viridis: Default Color Maps from ’Matplotlib’*.
+<https://github.com/sjmgarnier/viridis>.
 
 </div>
 
@@ -174,6 +239,13 @@ Language*. <https://github.com/docopt/docopt>.
 
 Kuhn, Max. 2020. *Caret: Classification and Regression Training*.
 <https://CRAN.R-project.org/package=caret>.
+
+</div>
+
+<div id="ref-pyjanitor">
+
+Ma, Eric. 2019. *Pyjanitor: Tools for Cleaning Pandas Dataframes*.
+<https://pypi.org/project/pyjanitor>.
 
 </div>
 
@@ -199,7 +271,7 @@ VanderPlas, Jacob, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit
 Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben
 Welsh, and Scott Sievert. 2018. “Altair: Interactive Statistical
 Visualizations for Python.” *Journal of Open Source Software*, December.
-The Open Journal. <https://doi.org/10.21105/joss.01057>.
+<https://doi.org/10.21105/joss.01057>.
 
 </div>
 
@@ -207,8 +279,7 @@ The Open Journal. <https://doi.org/10.21105/joss.01057>.
 
 Walt, Stéfan van der, S Chris Colbert, and Gael Varoquaux. 2011. “The
 Numpy Array: A Structure for Efficient Numerical Computation.”
-*Computing in Science & Engineering* 13 (2). IEEE Computer Society:
-22–30.
+*Computing in Science & Engineering* 13 (2): 22–30.
 
 </div>
 
@@ -224,6 +295,13 @@ Wickham, Hadley. 2007. “Reshaping Data with the reshape Package.”
 
 ———. 2017. *Tidyverse: Easily Install and Load the ’Tidyverse’*.
 <https://CRAN.R-project.org/package=tidyverse>.
+
+</div>
+
+<div id="ref-testthat">
+
+———. 2019. *Testthat: Unit Testing for R*.
+<https://CRAN.R-project.org/package=testthat>.
 
 </div>
 

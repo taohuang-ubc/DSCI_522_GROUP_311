@@ -24,12 +24,9 @@ To answer the question about predicting the red wine quality based on physiochem
 According to [British Columbia Wine Institute]( https://winebc.com/industry/media/quick-facts/), the BC wine industry contributes approximately $2.8 billion annually to British Columbia’s economy. To facilitate the development of BC wine industry, stakeholders are seeking a better way to improve the wine production and selling process with new techniques applied. Globally, wine certification and quality assessment are essential given this context.
 
 Wine quality assessment basically consists of two parts: the lab test and the sensory test. Physicochemical lab tests generally characterize wine based on features such as density, pH value, acidity, sugar, and alcohol, etc. While the sensory test is mainly relying on qualified experts. Due to the low interpretation of human sense, the relationship between sensory tests and the lab tests is somehow compared to a black box. The industry is curious about how ‘good’ the wine is, given the physicochemical lab test results.  Therefore, a model integrating physiochemical lab tests and sensory tests is helpful in addressing the industry concern, supporting the wine evaluation and thus improving local wine production.  
-
-
-
 ## Methodology
 
-The data used in this project is obtain from the [University of California Irvine Machine learning Repository]( http://archive.ics.uci.edu/ml/datasets/Wine+Quality).  It contains 1599 samples from red wine produced in Portugal. Each sample represents 11 physiochemical properties (features) from lab tests and also the sensory result (response) ranging from 0 to 10.  
+The data used in this project is obtain from the [University of California Irvine Machine learning Repository]( http://archive.ics.uci.edu/ml/datasets/Wine+Quality)[@cortez2009modeling][@Dua2019].  It contains 1599 samples from red wine produced in Portugal. Each sample represents 11 physiochemical properties (features) from lab tests and also the sensory result (response) ranging from 0 to 10.  
 
 
 The Analysis portion of this project is done by Python. A standard scaler is used to scale all features into the same scale. To perform feature selection, we use scikit-learn's linear regression as an estimator and perform recursive feature selection. Reragding the number of features to select, we try the number from 1 to 11 (sum of features), we found after selecting six features, if we selected more, the model stop improving. Then we perform linear regression on the top six features by using scikit-learn's linear regression model.
@@ -38,21 +35,25 @@ The following Python packages were used in this project:
 
 ### R 
 
-- docopt [@docopt]
+- testthat[@testthat]
 
-- knitr [@knitr]
+- docopt[@docopt]
 
-- tidyverse [@tidyverse]
+- knitr[@knitr]
+
+- tidyverse[@tidyverse]
 
 - janitor[@janitor]
 
 - reshape2[@reshape2]
 
+- viridis[@viridis]
+
 - caret[@caret]
 
 ### Python
 
-- docoptpython [@docoptpython]
+- docoptpython[@docoptpython]
 
 - request[@request]
 
@@ -62,8 +63,9 @@ The following Python packages were used in this project:
 
 - altair[@altair]
 
-- scikit-learn[@sklearn]
+- pyjanitor[@pyjanitor]
 
+- scikit-learn[@sklearn]
 
 ## Results
 
