@@ -87,22 +87,53 @@ The following Python packages were used in this project:
 
 ## Results
 
-According to the optimization process, it turned out that 6 features are
-the best combination for our model based on the training and testing
-error.
+By applying `sklearn`’s `Recursive Feature Selection`, we recursively
+fit a Linear Regression model to the data to get all the coefficients
+(as measures of importances). Each time, we increase the number of
+featuers that we like to select, from 1 to 11 (all the features).
+Eventually, we found after only 6 features are helping to decrease the
+errors, increasing the number of features selected beyond 6 will not
+help:
 
 <img src="../results/ranked_features.png" title="Figure 2. The relationship between MSE and number of featurs" alt="Figure 2. The relationship between MSE and number of featurs" width="100%" />
 
-The six physiochemical properties and their weights are reported as
-blow:
+Now, we run `sklearn`’s `Recursive Feature Selection` again with the
+`n_features_to_select` explicitly set to 6, then the algorithm will fit
+linear regression models, remove one feature that has the smallest
+weight. `sklearn` recursively does this until the number of the features
+decrease to 6. The following are the 6 features remained eventually and
+their corresponding weights in ascending
+order:
 
 <img src="../results/feature_weight_plot.png" title="Figure 1. Feature weight" alt="Figure 1. Feature weight" width="90%" />
 
-Based on the plot, we can see that: alchol is the most significant
-feature followed by volatile acidity and
-sulphates.
+Finally, we plot the actual values on the x-axis and the predicted
+values on the
+y-axis:
 
 <img src="../results/prediction_result.png" title="Figure 3. Prediction results" alt="Figure 3. Prediction results" width="90%" />
+
+Based on the plot, we can see that our model predicts well on the middle
+range (grades 5 to 7). However, for the low grade and high grade wines
+(wine with grades 4 and 8), the model tends to under-estimate.
+
+## Discussion:
+
+Even without domain expertise, we all know that those physiochemical
+properties of wine should be good indicators of the wine qualities. The
+fact that the model performed well on middle range proves that the
+selected features are useful and a linear regression is a reason model
+to choose.
+
+The reason that it did not perform well on low-grade and high-grade may
+be due to that the original training set is already not balanced enough,
+the data set does have more examples for the middle-grade wines and less
+examples for low and high grade wines, which means our model can not
+‘learn’ enough from the low and high grade wines.
+
+Some potential improvements can be simply oversampling the high-grade
+and low-grade wines to supplement the origianl dataset or to undersample
+the middle-grade wines in the original dataset.
 
 ## References
 
