@@ -21,6 +21,7 @@ The final report can be accessed [here](doc/report.md).
 
 ## Usage
 
+![](Makefile.png)
 To replicate the analysis, clone this GitHub repository, install the [dependencies](#dependencies) listed below, and run the following commands at the command line/terminal from the root directory of this project:
 ```
 make all
