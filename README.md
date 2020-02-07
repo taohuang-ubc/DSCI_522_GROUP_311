@@ -54,10 +54,12 @@ make clean
   - reshape2==1.4.3
   - viridis==0.5.1
   - caret==6.0-84
-
+  
 - Others:
   - ChromeDriver==79.0.3945.36
 
 ## Reference
 
 P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553, 2009. 
+
+
