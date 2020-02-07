@@ -43,6 +43,7 @@ make clean
   - altair==4.0.0
   - pyjanitor==0.18.1
   - scikit-learn ==0.21
+  - selenium==3.141.0
 
 - R version 3.6.1 and R packages:
   - testthat==2.2.1
@@ -54,6 +55,8 @@ make clean
   - viridis==0.5.1
   - caret==6.0-84
 
+- Others:
+  - ChromeDriver==79.0.3945.36
 
 ## Reference
 
