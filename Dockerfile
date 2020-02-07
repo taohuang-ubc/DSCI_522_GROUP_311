@@ -24,3 +24,6 @@ RUN Rscript -e "install.packages('testthat')"
 RUN Rscript -e "install.packages('docopt')"
 RUN Rscript -e "install.packages('knitr')"
 RUN Rscript -e "install.packages('tidyverse')"
+RUN Rscript -e "install.packages('janitor')"
+RUN Rscript -e "install.packages('reshape2')"
+
