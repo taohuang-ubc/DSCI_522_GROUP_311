@@ -21,3 +21,6 @@ RUN conda install scikit-learn
 
 # Install R Packages
 RUN Rscript -e "install.packages('testthat')" 
+RUN Rscript -e "install.packages('docopt')"
+RUN Rscript -e "install.packages('knitr')"
+RUN Rscript -e "install.packages('tidyverse')"
