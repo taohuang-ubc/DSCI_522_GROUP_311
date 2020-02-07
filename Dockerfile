@@ -26,4 +26,11 @@ RUN Rscript -e "install.packages('knitr')"
 RUN Rscript -e "install.packages('tidyverse')"
 RUN Rscript -e "install.packages('janitor')"
 RUN Rscript -e "install.packages('reshape2')"
+RUN Rscript -e "install.packages('virdis')"
+RUN Rscript -e "install.packages('caret')"
+
+# Put Anaconda Python in PATH
+ENV PATH="/opt/conda/bin:${PATH}"
+
+CMD ["/bin/bash"]
 
