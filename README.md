@@ -22,6 +22,27 @@ The final report can be accessed [here](doc/report.md).
 ## Usage
 
 ![](Makefile.png)
+
+#### 1\. Using Docker
+
+*note - the instructions in this section also depends on running this in
+a unix shell (e.g., terminal or Git Bash)*
+
+To replicate the analysis, install
+[Docker](https://www.docker.com/get-started). Then clone this GitHub
+repository and run the following command at the command line/terminal
+from the root directory of this project:
+
+    docker run --rm -v $(pwd):/DSCI_522_GROUP_311 ht2567306/testr1 make -C '/DSCI_522_GROUP_311' all
+
+To reset the repo to a clean state, with no intermediate or results
+files, run the following command at the command line/terminal from the
+root directory of this project:
+
+    docker run --rm -v $(pwd):/DSCI_522_GROUP_311 ht2567306/testr1 make -C '/DSCI_522_GROUP_311' clean
+
+#### 2\. Without using Docker
+
 To replicate the analysis, clone this GitHub repository, install the [dependencies](#dependencies) listed below, and run the following commands at the command line/terminal from the root directory of this project:
 ```
 make all
@@ -54,10 +75,12 @@ make clean
   - reshape2==1.4.3
   - viridis==0.5.1
   - caret==6.0-84
-
+  
 - Others:
   - ChromeDriver==79.0.3945.36
 
 ## Reference
 
 P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553, 2009. 
+
+
