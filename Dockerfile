@@ -45,4 +45,3 @@ RUN wget -q "https://chromedriver.storage.googleapis.com/79.0.3945.36/chromedriv
 ENV PATH="/opt/conda/bin:${PATH}"
 
 CMD ["/bin/bash"]
-
